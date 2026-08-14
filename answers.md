@@ -2,7 +2,6 @@
 ## Answers
 
 **Name:**_________________________
-**Name:**_________________________
 
 
 Place all written answers from `assignment-06.md` here for easier grading.
