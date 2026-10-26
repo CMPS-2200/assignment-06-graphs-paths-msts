@@ -23,14 +23,6 @@ def bfs_path(graph, source):
     """
     ###TODO
     pass
-
-def get_sample_graph():
-     return {'s': {'a', 'b'},
-            'a': {'b'},
-            'b': {'c'},
-            'c': {'a', 'd'},
-            'd': {}
-            }
     
 def get_path(parents, destination):
     """

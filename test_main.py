@@ -19,6 +19,14 @@ def test_shortest_shortest_path():
     assert result['c'] == (4,1)
     assert result['d'] == (7,2)
 
+def get_sample_graph():
+     return {'s': {'a', 'b'},
+            'a': {'b'},
+            'b': {'c'},
+            'c': {'a', 'd'},
+            'd': {}
+            }
+
 # 7 pts
 def test_bfs_path():
     graph = get_sample_graph()
