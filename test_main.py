@@ -32,7 +32,9 @@ def test_bfs_path():
     graph = get_sample_graph()
     parents = bfs_path(graph, 's')
     assert parents['a'] == 's'
-    assert parents['b'] == 's'    
+    # parent of 'b' depends on whether 'a' or 'b' is visited first
+    # work it on paper to see
+    assert parents['b'] == 's' or parents['b'] == 'a'
     assert parents['c'] == 'b'
     assert parents['d'] == 'c'
 
@@ -40,4 +42,5 @@ def test_bfs_path():
 def test_get_path():
     graph = get_sample_graph()
     parents = bfs_path(graph, 's')
-    assert get_path(parents, 'd') == 'sbc'
+    # two possible paths depending on whether 'a' or 'b' is visited first
+    assert get_path(parents, 'd') == 'sbc' or get_path(parents, 'd') == 'sabc'
