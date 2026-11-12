@@ -136,7 +136,7 @@ that we have a moderate number of edges, that is  $|E| = |V|^{1+\epsilon}$ for $
 .  
 
 
-**c) (3 pts)** What is the work of your algorithm?
+**c) (2 pts)** What is the work of your algorithm?
 
 
 **Enter answer in `answers.md`**

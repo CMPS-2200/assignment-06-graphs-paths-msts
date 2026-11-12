@@ -36,4 +36,4 @@ depth of a $d$-ary heap?
 - **4b. (3 pts)** Describe algorithm for next best MST.
 
 
-- **4c. (3 pts)** What is the work of your algorithm?
+- **4c. (2 pts)** What is the work of your algorithm?
