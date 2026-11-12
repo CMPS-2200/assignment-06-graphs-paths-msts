@@ -9,7 +9,7 @@ to a file names `answers.pdf`.
 
 ## 1. Shortest shortest paths
 
-a) Suppose we are given a a directed, **weighted** graph $G=(V,E)$ with only positive edge weights. For a source vertex $s$, design an algorithm to find the shortest path from $s$ to all other vertices with the fewest number of edges. That is, if there are multiple paths with the same total edge weight, output the one with the fewest number of edges.
+**a) (7 pts)** Suppose we are given a a directed, **weighted** graph $G=(V,E)$ with only positive edge weights. For a source vertex $s$, design an algorithm to find the shortest path from $s$ to all other vertices with the fewest number of edges. That is, if there are multiple paths with the same total edge weight, output the one with the fewest number of edges.
 
     Complete the function `shortest_shortest_path` and test with the example graph given in `test_shortest_shortest_path`. Note that the `shortest_shortest_path` function returns both the weight and the number of edges of each shortest path.
 
@@ -17,7 +17,7 @@ a) Suppose we are given a a directed, **weighted** graph $G=(V,E)$ with only pos
 .  
 .  
 
-b) What is the work and span of your algorithm? 
+**b) (2 pts)** What is the work and span of your algorithm? 
 
 **Enter answer in `answers.md`**
 
@@ -32,7 +32,7 @@ b) What is the work and span of your algorithm?
 
 ## 2. Computing paths
 
-a) We have seen how to run breadth-first search while keeping track of the distance of each node to the source. Let's now keep track of the actual shortest path from the source to each node. First, observe that the order in which BFS visits nodes implies a tree over the graph:
+**a) (7 pts)** We have seen how to run breadth-first search while keeping track of the distance of each node to the source. Let's now keep track of the actual shortest path from the source to each node. First, observe that the order in which BFS visits nodes implies a tree over the graph:
 
 ![bfs.png](bfs.png)
 
@@ -44,7 +44,7 @@ Here, the dark edges indicate all the shortest paths discovered by BFS. To keep 
 
 Complete the `bfs_path` function to return this parent `dict` and test it with `test_bfs_path`. Your algorithm should not increase the asymptotic work/span of BFS.
 
-b) Next, complete `get_path`, which takes in the parent `dict` and a node, and returns a string indicating the path from the source node to the destination node. Test with `test_get_path`.
+**b) (7 pts)** Next, complete `get_path`, which takes in the parent `dict` and a node, and returns a string indicating the path from the source node to the destination node. Test with `test_get_path`.
 
 
 ## 3. Improving Dijkstra
@@ -53,7 +53,7 @@ In our analysis of the work done by Dijkstra's algorithm, we ended up
 with a bound of $O(|E|\log |V|)$. Let's take a closer look at how
 changing the type of heap used affects this work bound.
 
-a) A $d$-ary heap is a generalization of a binary heap in which we
+**a) (4 pts)** A $d$-ary heap is a generalization of a binary heap in which we
 have a $d$-ary tree as the data structure. The heap and shape
 properties are still maintained, but each internal node now has $d$
 children (except possibly the rightmost leaf). What is the maximum
@@ -69,7 +69,7 @@ depth of a $d$-ary heap?
 
 
 
-b) In a binary heap the `delete-min` operation removes the root,
+**b) (4 pts)** In a binary heap the `delete-min` operation removes the root,
 places the rightmost leaf at the root position and restores the heap
 property by swapping downward. Similarly the `insert` operation places
 the new element as the rightmost leaf and swaps upward to restore the
@@ -86,7 +86,7 @@ work differs for each operation.
 
 
 
-c) Now, suppose we use a $d$-ary heap for Dijkstra's algorithm. What is the
+**c) (5 pts)** Now, suppose we use a $d$-ary heap for Dijkstra's algorithm. What is the
 new bound on the work? Your bound will be a function of
 $|V|$, $|E|$, and $d$ and will account for the `delete-min` and
 `insert` operations separately.
@@ -100,7 +100,7 @@ $|V|$, $|E|$, and $d$ and will account for the `delete-min` and
 
 
 
-d) Now that we have a characterization of how Dijkstra's algorithm
+**d) (6 pts)** Now that we have a characterization of how Dijkstra's algorithm
 performs with a $d$-ary heap, let's look at how we might be able to
 optimize the choice of $d$ under certain assumptions. Let's suppose
 that we have a moderate number of edges, that is  $|E| = |V|^{1+\epsilon}$ for $0<\epsilon
@@ -116,7 +116,7 @@ that we have a moderate number of edges, that is  $|E| = |V|^{1+\epsilon}$ for $
 
 ## 4. Spanning trees
 
-a) Consider a variation of the spanning tree problem that instead asks for a tree that minimizes the maximum weight of any edge in the spanning tree. Let's call this the minimum maximum edge tree (MMET). Is a solution to MST guaranteed to be a solution to MMET? Why or why not?
+**a) (3 pts)** Consider a variation of the spanning tree problem that instead asks for a tree that minimizes the maximum weight of any edge in the spanning tree. Let's call this the minimum maximum edge tree (MMET). Is a solution to MST guaranteed to be a solution to MMET? Why or why not?
 
 
 **Enter answer in `answers.md`**
@@ -126,7 +126,7 @@ a) Consider a variation of the spanning tree problem that instead asks for a tre
 .  
 
 
-b) Suppose that you have a MST but it is impossible to use for some reason. Describe an algorithm to instead find the next best tree (pseudo-code or English is fine). That is, return the tree with the next lowest weight. 
+**b) (3 pts)** Suppose that you have a MST but it is impossible to use for some reason. Describe an algorithm to instead find the next best tree (pseudo-code or English is fine). That is, return the tree with the next lowest weight. 
 
 
 **Enter answer in `answers.md`**
@@ -136,7 +136,7 @@ b) Suppose that you have a MST but it is impossible to use for some reason. Desc
 .  
 
 
-c) What is the work of your algorithm?
+**c) (3 pts)** What is the work of your algorithm?
 
 
 **Enter answer in `answers.md`**
